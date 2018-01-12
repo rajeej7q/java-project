@@ -1,4 +1,3 @@
--bash-4.2$ cat Jenkinsfile
 pipeline {
  agent any
 
