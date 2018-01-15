@@ -1,5 +1,6 @@
 pipeline {
- agent label 'master' 
+ agent  {
+label 'master' 
 } 
   stages{
    stage ("Unit tests") {
@@ -24,3 +25,4 @@ pipeline {
  archiveArtifacts artifacts: 'dist/*.jar' , fingerprint:true 
           }
       }
+}
