@@ -6,7 +6,7 @@ options {
   stages{
    stage ("Unit tests") {
    steps{
-    sh 'ant -f test.xml -v
+    sh 'ant -f test.xml -v'
      junit 'report/result.xml'
 	}
      }
