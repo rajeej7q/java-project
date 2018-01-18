@@ -1,13 +1,12 @@
 pipeline {
  agent any
-#comments
 options {
     buildDiscarder(logRotator(numToKeepStr: '2' , artifactNumToKeepStr: '1' ))
    }
   stages{
    stage('Unit tests') {
      steps {
-        sh 'ant -f test.xml -v
+        sh 'ant -f test.xml -v'
         junit 'reports/result.xml' 
              }
           }
