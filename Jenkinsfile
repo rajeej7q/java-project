@@ -77,7 +77,7 @@ stage('Promote Development Branch to Master') {
       steps {
         echo "Stashing Any Local Changes--"
         sh 'git stash'
-        echo "Checking Out Development Branch--"
+        echo "Checking Out Development Branch"
         sh 'git checkout development'
         echo 'Checking Out Master Branch'
         sh 'git pull origin'
