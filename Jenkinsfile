@@ -60,7 +60,7 @@ pipeline {
         	label 'apache'
       	}	
          when {
-		 branch 'master' 
+		 branch 'master1' 
               }
 		steps {
         sh "cp /var/www/html/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/green/rectangle_${env.BUILD_NUMBER}.jar"
@@ -81,11 +81,11 @@ stage('Promote Development Branch to Master') {
         sh 'git checkout development'
         echo 'Checking Out Master Branch'
         sh 'git pull origin'
-        sh 'git checkout master'
+        sh 'git checkout master1'
         echo 'Merging Development into Master Branch'
         sh 'git merge development'
         echo 'Pushing to Origin Master'
-        sh 'git push origin master'
+        sh 'git push origin master1'
       }
  } 
 }
