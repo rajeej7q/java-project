@@ -105,6 +105,7 @@ stage('Promote Development Branch to Master') {
     }
    }
  } 
+}
   post {
     failure {
       emailext(
@@ -114,6 +115,5 @@ stage('Promote Development Branch to Master') {
         to: "rajk.moudgil@gmail.com"
       )
     }
-}
 }
 }
